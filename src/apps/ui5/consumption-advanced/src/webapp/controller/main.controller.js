@@ -325,7 +325,7 @@ sap.ui.define([
 			var sDeviceId = this._oViewModel.getProperty('/selectedDeviceId');
 			var sMessageTypeId = this._oViewModel.getProperty('/selectedMessageTypeId').toUpperCase();
 
-			var shownValueCount = this._oViewModel.getProperty('/shownValueCount');
+			var shownValueCount = this.SHOWN_VALUE_COUNTS[this._oViewModel.getProperty('/shownValueCount')];
 			this._oDataModel.read("/T_IOT_" + sMessageTypeId, {
 				urlParameters: {
 					"$top": shownValueCount
